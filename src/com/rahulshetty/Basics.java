@@ -184,6 +184,17 @@ public class Basics {
 		driver.findElement(By.linkText("Top")).click();
 	}
 
+
+
+@Test
+	public void tc123() throws InterruptedException {
+		Actions action = new Actions(driver);
+		WebElement move = driver.findElement(By.cssSelector("#mousehover"));
+		action.moveToElement(move).perform();
+		Thread.sleep(20000);
+		driver.findElement(By.linkText("Top")).click();
+	}
+	
 	@Test
 	public void datePick() throws InterruptedException {
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
@@ -235,5 +246,13 @@ public class Basics {
 		System.out.println("I am the end  of the execution");
 
 	}
+
+@AfterTest
+	public void postexe() {
+		System.out.println("I am tution");
+
+	}
+
+
 
 }
